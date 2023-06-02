@@ -1,3 +1,3 @@
 const test = () => {
-  console.log('Hello world!');
+  console.log('хэрло ворлд!');
 };
