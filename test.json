@@ -1,0 +1,86 @@
+{
+  date: '2023-06-01T16:51:06+03:00',
+  order_id: '12912636',
+  order_num: '6e1710c6-03db-4156-a09e-50529b87ce68',
+  domain: 'winshortads.payform.ru',
+  sum: '4500.00',
+  currency: 'rub',
+  customer_phone: '+375292547408',
+  customer_email: 'fiericle@mail.ru',
+  customer_extra: '',
+  payment_type: 'Оплата картой, выпущенной в РФ',
+  commission: '3.5',
+  commission_sum: '157.50',
+  attempt: '1',
+  sys: 'coreapp',
+  _param_type: 'COURSE_PAYMENT',
+  products: [
+    {
+      name: 'Прорывная Идея',
+      price: '4500.00',
+      quantity: '1',
+      sum: '4500.00'
+    }
+  ],
+  payment_status: 'success',
+  payment_status_description: 'Успешная оплата',
+  payment_init: 'manual'
+},
+{
+  date: '2023-06-02T09:22:04+03:00',
+  order_id: '12928971',
+  order_num: '87b23dd4-860f-40e6-8f00-896f25f65b15',
+  domain: 'winshortads.payform.ru',
+  sum: '4500.00',
+  currency: 'kzt',
+  currency_sum: '28302.95',
+  currency_commission_sum: '2830.30',
+  customer_phone: '+37126667481',
+  customer_email: 'kondratiev-e@yandex.ru',
+  customer_extra: '',
+  payment_type: 'Оплата картой всех стран мира, кроме РФ',
+  commission: '10',
+  commission_sum: '450.00',
+  attempt: '1',
+  sys: 'coreapp',
+  _param_type: 'COURSE_PAYMENT',
+  products: [
+    {
+      name: 'Прорывная Идея',
+      price: '4500.00',
+      quantity: '1',
+      sum: '4500.00'
+    }
+  ],
+  payment_status: 'success',
+  payment_status_description: 'Успешная оплата',
+  payment_init: 'manual'
+},
+{
+  date: '2023-06-02T14:51:07+03:00',
+  order_id: '12937514',
+  order_num: '2c5953a7-c386-4cfe-8e5a-e7e01ffc4cc2',
+  domain: 'winshortads.payform.ru',
+  sum: '4500.00',
+  currency: 'rub',
+  customer_phone: '+79037697694',
+  customer_email: 'natali8761@yandex.ru',
+  customer_extra: '',
+  payment_type: 'Быстрый платёж, без ввода данных карты. Для карт РФ',
+  commission: '3.5',
+  commission_sum: '157.50',
+  attempt: '1',
+  sys: 'coreapp',
+  _param_type: 'COURSE_PAYMENT',
+  products: [
+    {
+      name: 'Прорывная Идея',
+      price: '4500.00',
+      quantity: '1',
+      sum: '4500.00'
+    }
+  ],
+  payment_status: 'success',
+  payment_status_description: 'Успешная оплата',
+  payment_init: 'manual'
+}
