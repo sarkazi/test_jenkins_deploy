@@ -17,7 +17,7 @@ pipeline {
       steps {
         echo "================= start building image ======================"
         dir ('docker/test') {
-          sh ('docker build -f Dockerfile.dev -t toolbox:latest .')
+          sh ('docker build -f Dockerfile.dev -t nikookin/test:latest .')
         }
       }
     }
