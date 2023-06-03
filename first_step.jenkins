@@ -18,6 +18,7 @@ pipeline {
             echo 'zhopa'
             cd ..
             cd ..
+            cd ..
             ls -la
           '''
         }
