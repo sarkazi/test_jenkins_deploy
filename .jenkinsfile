@@ -1,0 +1,18 @@
+properties([disableConcurrentBuilds()])
+
+pipeline {
+  agent {
+    label: 'master'
+  }
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '10', artifactToNumStr: '10'))
+    timestamps()
+  }
+  stages {
+    stage ('First step') {
+      steps {
+        sh 'ssh root@85.193.83.245 \'hostname\''
+      }
+    }
+  }
+}
