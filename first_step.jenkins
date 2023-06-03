@@ -9,19 +9,28 @@ pipeline {
   }
 
   stages {
-    stage ('Build') {
+    stage ('DeployToStaging') {
       steps {
         echo "Piska"
       }
     }
-    stage ('Test') {
+    stage('Build Docker Image') {
+      when {
+        branch 'master'
+      }
       steps {
-        echo "Zhopa"
+        script {
+            app = docker.build("nikookin/test")
+            app.inside {
+              sh 'echo $(curl localhost:8080)'
+            }
+          }
+        }
       }
     }
-    stage ('Deploy') {
+    stage ('finish') {
       steps {
-        echo "Siska"
+        echo "Piska Zhopa Siska"
       }
     }
   }
