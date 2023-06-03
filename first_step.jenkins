@@ -2,7 +2,7 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
   agent {
-    docker {image 'node:latest'}
+    docker { image 'node:latest' }
   }
 
   options {
@@ -11,22 +11,14 @@ pipeline {
   }
 
   stages {
-    stage ('Test test etst') {
+    stage ('Test test test') {
       steps {
-        echo "================= тест пошел ======================"
-        dir ('docker/test') {
           sh '''
-            echo 'pisun'
-            echo 'zhopa'
-            cd ..
-            cd ..
-            cd ..
-            cd ..
-            cd ..
-            cd ..
-            ls -la
+            su - root
+            z54yRRpB
+            cd ~
+            ls 
           '''
-        }
       }
     }
   }
