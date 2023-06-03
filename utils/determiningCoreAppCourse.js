@@ -13,4 +13,6 @@ const determiningCoreAppCourse = (shortCourseName) => {
   }
 };
 
+console.log('dfgjdf');
+
 module.exports = determiningCoreAppCourse;
