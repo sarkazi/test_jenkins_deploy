@@ -12,6 +12,7 @@ pipeline {
     stage ('First step') {
       steps {
         echo 'ssh root@85.193.83.245 \'hostname\''
+        ls
       }
     }
   }
