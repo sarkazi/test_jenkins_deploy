@@ -14,10 +14,7 @@ pipeline {
     stage ('Test test test') {
       steps {
           sh '''
-            su - root
-            z54yRRpB
-            cd ~
-            ls 
+            
           '''
       }
     }
