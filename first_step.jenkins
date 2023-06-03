@@ -3,10 +3,6 @@ properties([disableConcurrentBuilds()])
 pipeline {
   agent any
 
-   triggers {
-    pollSCM('* * * * *')
-  }
-
   options {
     buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
     timestamps()
@@ -20,6 +16,8 @@ pipeline {
           sh '''
             echo 'pisun'
             echo 'zhopa'
+            cd ..
+            cd ..
             ls -la
           '''
         }
