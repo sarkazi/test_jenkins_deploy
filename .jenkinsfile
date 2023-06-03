@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage ('First step') {
       steps {
-        echo "piska"
+        echo 'ssh root@85.193.83.245 \'hostname\''
       }
     }
   }
