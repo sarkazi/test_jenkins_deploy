@@ -13,6 +13,14 @@ pipeline {
   }
 
   stages {
+    stage ('Docker login') {
+      steps {
+        echo "================= docker login ======================"
+        withCredentials([usernamePassword(credentialsId: 'dockerhub_nikookin', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+          sh ('docker login -u $USERNAME -p $PASSWORD')
+        }
+      }
+    }
     stage ('Crete docker image') {
       steps {
         echo "================= start building image ======================"
