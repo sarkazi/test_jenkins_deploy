@@ -4,7 +4,7 @@ pipeline {
   agent any
 
    triggers {
-    pollSCM('*****')
+    pollSCM('* * * * *')
   }
 
   options {
@@ -17,7 +17,7 @@ pipeline {
       steps {
         echo "================= start building image ======================"
         dir ('docker/test') {
-          sh ('docker build - < Dockerfile.dev')
+          sh ('docker build -f Dockerfile.dev')
         }
       }
     }
