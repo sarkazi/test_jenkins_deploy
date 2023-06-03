@@ -11,17 +11,17 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-        echo "Писька"
+        echo "Piska"
       }
     }
     stage ('Test') {
       steps {
-        echo "Жопа"
+        echo "Zhopa"
       }
     }
     stage ('Deploy') {
       steps {
-        echo "Сиська"
+        echo "Siska"
       }
     }
   }
