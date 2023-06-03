@@ -3,6 +3,10 @@ properties([disableConcurrentBuilds()])
 pipeline {
   agent any
 
+   triggers {
+    poolSCM('*****')
+  }
+
   options {
     buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
     timestamps()
