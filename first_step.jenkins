@@ -13,26 +13,16 @@ pipeline {
   }
 
   stages {
-    stage ('Docker login') {
+    stage ('Test test etst') {
       steps {
-        echo "================= docker login ======================"
-        withCredentials([usernamePassword(credentialsId: 'dockerhub_nikookin', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-          sh ('docker login -u $USERNAME -p $PASSWORD')
-        }
-      }
-    }
-    stage ('Crete docker image') {
-      steps {
-        echo "================= start building image ======================"
+        echo "================= тест пошел ======================"
         dir ('docker/test') {
-          sh ('docker build -f Dockerfile.dev -t nikookin/test:latest .')
+          sh '''
+            echo 'pisun'
+            echo 'zhopa'
+            ls -la
+          '''
         }
-      }
-    }
-    stage ('Docker push') {
-      steps {
-        echo "================= start pushing image ======================"
-        sh('docker push nikookin/test:latest')
       }
     }
   }
