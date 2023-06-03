@@ -4,7 +4,7 @@ pipeline {
   agent any
 
    triggers {
-    poolSCM('*****')
+    pollSCM('*****')
   }
 
   options {
