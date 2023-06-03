@@ -12,9 +12,10 @@ pipeline {
     stage ('Crete docker image') {
       steps {
         echo "================= start building image ======================"
-        dir ('docker/test') {
-          sh 'docker build .'
-        }
+        sh ('ls')
+        //dir ('docker/test') {
+        //  sh 'docker build .'
+        //}
       }
     }
   }
