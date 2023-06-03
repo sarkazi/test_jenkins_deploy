@@ -29,5 +29,11 @@ pipeline {
         }
       }
     }
+    stage ('Docker push') {
+      steps {
+        echo "================= start pushing image ======================"
+        sh('docker push nikookin/test:latest')
+      }
+    }
   }
 }
