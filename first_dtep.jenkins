@@ -9,14 +9,12 @@ pipeline {
   }
 
   stages {
-    stage ('First step') {
+    stage ('Crete docker image') {
       steps {
-        echo 'ssh root@85.193.83.245 \'hostname\''
-      }
-    }
-    stage ('Second stage') {
-      steps {
-        echo 'ssh root@85.193.83.245 \'uptime\''
+        echo "================= start building image' ======================"
+        dir ('docker/test') {
+          sh 'docker build .'
+        }
       }
     }
   }
