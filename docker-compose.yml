@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-  node-server:
-    image: node:16-alpine
-    environment:
-      - ENABLE__ENVIRNMENT=false
-    ports:
-      - 6000:6000
