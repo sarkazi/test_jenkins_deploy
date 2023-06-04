@@ -14,6 +14,20 @@ pipeline {
         '''
       }
     }
+    stage('docker system prune') {
+      steps {
+        sh '''
+          docker system prune -a --volumes -f
+        '''
+      }
+    }
+    stage('run container') {
+      steps {
+        sh '''
+          docker compose up -d --no-color --wait
+        '''
+      }
+    }
   }
 }
 
