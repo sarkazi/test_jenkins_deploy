@@ -2,39 +2,33 @@ pipeline {
   agent any
 
   stages {
-    stage('--------------------- delete workspace -----------------------') {
+    stage('DELETE WORKSPACE') {
       steps {
-        echo "deleting workspace"
+        echo "deleting workspace..."
         deleteDir()
       }
     }
-    stage('--------------------- test 1 --------------------') {
+    stage('PULLING FROM REPO') {
       steps {
-        sh '''
-          pwd
-          ls -la
-        '''
-      }
-    }
-    stage('---------------------------- checkout ------------------------------') {
-      steps {
-        git branch: "master",
+        git branch: "dev",
         url: "https://github.com/sarkazi/test_jenkins_deploy.git"
       }
     }
-    stage('--------------------- test 2 --------------------') {
+    stage('BUILD DOCKER IMAGE') {
       steps {
         sh '''
-          pwd
-          ls -la
+          docker build --file Dockerfile.dev -t nikookin/wsa-server:0.1 .
         '''
       }
     }
-     stage('--------------------- docker build --------------------') {
+    stage('PUSH DOCKER IMAGE TO DOCKER_HUB') {
       steps {
-        sh '''
-          docker build --file Dockerfile.dev -t nikookin/was-server-test:0.1 .
-        '''
+        withDockerRegistry(credentialsId: 'dockerhub-cred-nikookin', url: 'https://index.docker.io/v1/') {
+          sh '''
+            docker push nikookin/wsa-server:0.1
+          '''
+        }
+        
       }
     }
   }
