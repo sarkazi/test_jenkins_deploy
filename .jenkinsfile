@@ -17,7 +17,7 @@ pipeline {
     stage('BUILD DOCKER IMAGE') {
       steps {
         sh '''
-          docker build --file Dockerfile.dev -t nikookin/wsa-server:0.1 .
+          docker build --file Dockerfile.dev -t nikookin/wsa-server:0.2 .
         '''
       }
     }
@@ -25,7 +25,7 @@ pipeline {
       steps {
         withDockerRegistry(credentialsId: 'dockerhub-cred-nikookin', url: 'https://index.docker.io/v1/') {
           sh '''
-            docker push nikookin/wsa-server:0.1
+            docker push nikookin/wsa-server:0.2
           '''
         }
         
@@ -34,7 +34,7 @@ pipeline {
     stage('DELETE DOCKER IMAGE LOCALLY') {
       steps {
         sh '''
-          docker rmi nikookin/wsa-server:0.1
+          docker rmi nikookin/wsa-server:0.2
         '''
       }
     }
