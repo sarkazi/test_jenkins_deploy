@@ -13,6 +13,4 @@ const determiningCoreAppCourse = (shortCourseName) => {
   }
 };
 
-console.log('47589437');
-
 module.exports = determiningCoreAppCourse;
