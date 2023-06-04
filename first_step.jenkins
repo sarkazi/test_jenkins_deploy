@@ -2,9 +2,9 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
   agent any
-  
+
   stages {
-    stage {
+    stage('verify tooling') {
       steps {
         sh '''
           docker version
