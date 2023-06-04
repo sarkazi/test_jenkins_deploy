@@ -31,6 +31,13 @@ pipeline {
         
       }
     }
+    stage('DELETE DOCKER IMAGE LOCALLY') {
+      steps {
+        sh '''
+          docker rmi nikookin/wsa-server:0.1
+        '''
+      }
+    }
   }
 }
 
